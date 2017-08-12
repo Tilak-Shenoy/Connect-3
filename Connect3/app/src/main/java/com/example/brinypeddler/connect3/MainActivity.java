@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     boolean game=true;
     int active = 0;
     int[] stat = {2, 2, 2, 2, 2, 2, 2, 2, 2};
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
     public void reset(View V) {
         LinearLayout playAgainLayout = (LinearLayout) findViewById(R.id.playAgainLayout);
         playAgainLayout.setVisibility(View.INVISIBLE);
@@ -81,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
         int active = 0;
         for(int i=0;i<stat.length;i++)
             stat[i]=2;
-
 
         GridLayout grid = (GridLayout) findViewById(R.id.grid);
         for(int i=0;i<grid.getChildCount();i++)
